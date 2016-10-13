@@ -12,48 +12,23 @@ import java.util.Properties;
 
 /**
  * @author Kurtis Chiappone
- * @date 10/10/2016
  */
 public class MailUtil {
 
     private static final Logger logger = LoggerFactory.getLogger( MailUtil.class );
 
-    /**
-     * @param mailhost
-     * @param from
-     * @param to
-     * @param subject
-     * @param body
-     */
     public static void sendMessage( String mailhost, String from, String to, String subject, String body ) {
 
         sendMessage( mailhost, from, to, null, subject, body, false );
 
     }
 
-    /**
-     * @param mailhost
-     * @param from
-     * @param to
-     * @param bcc
-     * @param subject
-     * @param body
-     */
     public static void sendMessage( String mailhost, String from, String to, String bcc, String subject, String body ) {
 
         sendMessage( mailhost, from, to, bcc, subject, body, false );
 
     }
 
-    /**
-     * @param mailhost
-     * @param from
-     * @param to
-     * @param bcc
-     * @param subject
-     * @param body
-     * @param isHtml
-     */
     public static void sendMessage( String mailhost, String from, String to, String bcc, String subject, String body,
                     boolean isHtml ) {
 
